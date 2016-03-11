@@ -16,34 +16,34 @@ png(file = "plot4.png", width = 480, height = 480, units = "px")
 par(mfrow = c(2, 2), mar = c(4, 4, 2, 1))
 # create plot1
 with(data, plot(datetime, Global_active_power, type = "l", 
-                xlab = "", ylab = "Global Active Power", cex.axis = 0.6, cex.lab = 0.6))
+                xlab = "", ylab = "Global Active Power", cex.axis = 0.8, cex.lab = 0.8))
         box(which = "plot", col = "gray")
-        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.6)
-        axis(2, cex.axis = 0.6)
+        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.8)
+        axis(2, cex.axis = 0.8)
 # create plot2
 with(data, plot(datetime, Voltage, type = "l", 
-                xlab = "datetime", ylab = "Voltage", cex.axis = 0.6, cex.lab = 0.6))
+                xlab = "datetime", ylab = "Voltage", cex.axis = 0.8, cex.lab = 0.8))
         box(which = "plot", col = "gray")
-        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.6)
-        axis(2, cex.axis = 0.6)
+        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.8)
+        axis(2, cex.axis = 0.8)
 # create plot3
 with(data, {
         plot(datetime, Sub_metering_1, type = "n", axes = FALSE, 
-             xlab = "", ylab = "Energy sub metering", cex.lab = 0.6, cex.axis = 0.6)
+             xlab = "", ylab = "Energy sub metering", cex.lab = 0.8, cex.axis = 0.8)
         lines(datetime, Sub_metering_1, type = "l", col = "black")
         lines(datetime, Sub_metering_2, type = "l", col = "red")
         lines(datetime, Sub_metering_3, type = "l", col = "blue")
         box(which = "plot", col = "gray")
-        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.6)
-        axis(2, cex.axis = 0.6)
+        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.8)
+        axis(2, cex.axis = 0.8)
         legend("topright", lty = "solid", bty = "n", col = c("black", "red", "blue"), 
-               legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex = 0.5)
+               legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex = 0.7)
 })
 #create plot4
 with(data, plot(datetime, Global_reactive_power, type = "l", 
-                xlab = "datetime", ylab = "Global Reactive Power", cex.axis = 0.6, cex.lab = 0.6))
+                xlab = "datetime", ylab = "Global Reactive Power", cex.axis = 0.8, cex.lab = 0.8))
         box(which = "plot", col = "gray")
-        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.6)
-        axis(2, cex.axis = 0.6)
+        axis(1, at=c(1170306000, 1170392400, 1170478740), labels = c("Thu", "Fri", "Sat"), cex.axis = 0.8)
+        axis(2, cex.axis = 0.8)
 # close the PNG device
 dev.off()

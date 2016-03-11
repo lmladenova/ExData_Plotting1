@@ -14,6 +14,6 @@ data$datetime <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:
 png(file = "plot2.png", width = 480, height = 480, units = "px")
 # create a plot 
 with(data, plot(datetime, Global_active_power, type = "l", 
-                xlab = "", ylab = "Global Active Power (kilowatts)", cex.axis = 0.6, cex.lab = 0.6))
+                xlab = "", ylab = "Global Active Power (kilowatts)", cex.axis = 0.8, cex.lab = 0.8))
 # close the PNG device
 dev.off()
